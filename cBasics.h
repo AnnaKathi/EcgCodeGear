@@ -1,10 +1,19 @@
 //---------------------------------------------------------------------------
-#ifndef BasicsH
-#define BasicsH
+#ifndef cBasicsH
+#define cBasicsH
 //---------------------------------------------------------------------------
-#include <StdCtrls.hpp>
 #include <ComCtrls.hpp>
 //---------------------------------------------------------------------------
-void MemoPrint(TMemo* memo, char* msg, ...);
+class cBasics
+	{
+private:
+
+protected:
+	TProgressBar*	pbJob;
+	TMemo*			mInfo;
+
+public:
+
+	};
 //---------------------------------------------------------------------------
 #endif

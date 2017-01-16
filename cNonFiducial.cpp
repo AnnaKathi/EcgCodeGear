@@ -4,6 +4,7 @@
 #include "cNonFiducial.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
+extern TProgressBar* pbJob;
 //---------------------------------------------------------------------------
 cNonFiducial::cNonFiducial()
 	{

@@ -9,6 +9,7 @@
 //---------------------------------------------------------------------------
 void MemoPrint(TMemo* memo, char* msg, ...)
 	{
+	if (memo == NULL) return;
 	char    buffer[512];
 	int     nsiz;
 	va_list argptr;

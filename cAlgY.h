@@ -3,15 +3,17 @@
 #define cAlgYH
 //---------------------------------------------------------------------------
 #include <StdCtrls.hpp>
+#include <ComCtrls.hpp>
 #include <stdio.h>
 //---------------------------------------------------------------------------
 #include "Basics.h"
+#include "cAlgorithmus.h"
 #include "cNonFiducial.h"
 //---------------------------------------------------------------------------
 //! Klasse cAlgY (Beispiel)
 /*! Die Klasse cAlgY, non-fiducial-Beispiel
  */
-class cAlgY
+class cAlgY : cAlgorithmus
 	{
 private:
 	cNonFiducial*	NonFid;
@@ -20,7 +22,17 @@ public:
 	cAlgY();
 	~cAlgY();
 
-	bool			Authenticate(TMemo* mInfo);
+	bool		Authenticate(TMemo* mInfo);
+	bool		TestPB();
+
+	//-----------------------------------------------------------------------
+	//------------ Funktionalitäten -----------------------------------------
+	//-----------------------------------------------------------------------
+
+	//-----------------------------------------------------------------------
+	//------------ getter und setter ----------------------------------------
+	//-----------------------------------------------------------------------
+	void setBar(TProgressBar* pb);
 	};
 //---------------------------------------------------------------------------
 #endif
