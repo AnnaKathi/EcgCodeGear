@@ -8,18 +8,17 @@ extern TProgressBar* pbJob;
 //---------------------------------------------------------------------------
 cNonFiducial::cNonFiducial()
 	{
-	Math = new cMath();
 	}
 //---------------------------------------------------------------------------
 cNonFiducial::~cNonFiducial()
 	{
-	delete Math;
 	}
 //---------------------------------------------------------------------------
-bool cNonFiducial::findFeatures(TMemo* mInfo)
+bool cNonFiducial::findFeatures()
 	{
-	Math->buildDerivates(mInfo);
-	MemoPrint(mInfo, "(nonfid) Non-Fiducial Features found"); //Test Klassenkonzept
+	MemoPrint("(nonfid) begin search for features..."); //Test Klassenkonzept
+	buildDerivates();
+	MemoPrint("(nonfid) Non-Fiducial Features found"); //Test Klassenkonzept
 	return true;
 	}
 //---------------------------------------------------------------------------

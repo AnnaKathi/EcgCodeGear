@@ -89,45 +89,37 @@
     <ResFiles Include="FrameworkEcg.res">
       <BuildOrder>0</BuildOrder>
     </ResFiles>
-    <CppCompile Include="Basics.cpp">
-      <DependentOn>Basics.h</DependentOn>
-      <BuildOrder>2</BuildOrder>
-    </CppCompile>
-    <CppCompile Include="cAlgorithmus.cpp">
-      <DependentOn>cAlgorithmus.h</DependentOn>
-      <BuildOrder>12</BuildOrder>
-    </CppCompile>
     <CppCompile Include="cAlgX.cpp">
       <DependentOn>cAlgX.h</DependentOn>
-      <BuildOrder>9</BuildOrder>
+      <BuildOrder>8</BuildOrder>
     </CppCompile>
     <CppCompile Include="cAlgY.cpp">
       <DependentOn>cAlgY.h</DependentOn>
-      <BuildOrder>10</BuildOrder>
+      <BuildOrder>9</BuildOrder>
     </CppCompile>
     <CppCompile Include="cBasics.cpp">
       <DependentOn>cBasics.h</DependentOn>
-      <BuildOrder>3</BuildOrder>
+      <BuildOrder>2</BuildOrder>
     </CppCompile>
     <CppCompile Include="cCsv.cpp">
       <DependentOn>cCsv.h</DependentOn>
-      <BuildOrder>4</BuildOrder>
+      <BuildOrder>3</BuildOrder>
     </CppCompile>
     <CppCompile Include="cDatastream.cpp">
       <DependentOn>cDatastream.h</DependentOn>
-      <BuildOrder>5</BuildOrder>
+      <BuildOrder>4</BuildOrder>
     </CppCompile>
     <CppCompile Include="cFiducial.cpp">
       <DependentOn>cFiducial.h</DependentOn>
-      <BuildOrder>7</BuildOrder>
+      <BuildOrder>6</BuildOrder>
     </CppCompile>
     <CppCompile Include="cMath.cpp">
       <DependentOn>cMath.h</DependentOn>
-      <BuildOrder>6</BuildOrder>
+      <BuildOrder>5</BuildOrder>
     </CppCompile>
     <CppCompile Include="cNonFiducial.cpp">
       <DependentOn>cNonFiducial.h</DependentOn>
-      <BuildOrder>8</BuildOrder>
+      <BuildOrder>7</BuildOrder>
     </CppCompile>
     <CppCompile Include="FrameworkEcg.cpp">
       <BuildOrder>1</BuildOrder>
@@ -135,7 +127,7 @@
     <CppCompile Include="Test_Main.cpp">
       <Form>fmMain</Form>
       <DependentOn>Test_Main.h</DependentOn>
-      <BuildOrder>11</BuildOrder>
+      <BuildOrder>10</BuildOrder>
     </CppCompile>
     <FormResources Include="Test_Main.dfm" />
     <BuildConfiguration Include="Debug">

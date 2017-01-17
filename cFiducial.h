@@ -6,7 +6,6 @@
 #include <ComCtrls.hpp>
 #include <stdio.h>
 //---------------------------------------------------------------------------
-#include "Basics.h"
 #include "cMath.h"
 //---------------------------------------------------------------------------
 //! Klasse cFiducial, fiducial features finden und verarbeiten
@@ -16,7 +15,7 @@
  *  Herzschlag, welche von den Algorithmen für die Authentifizierung verwendet
  *  werden können.
  */
-class cFiducial
+class cFiducial : public cMath
 	{
 private:
 	cMath*			Math;
@@ -25,7 +24,7 @@ public:
 	cFiducial();
 	~cFiducial();
 
-	bool 		findFeatures(TMemo* mInfo);
+	bool 		findFeatures();
 	//-----------------------------------------------------------------------
 	//------------ Funktionalitäten -----------------------------------------
 	//-----------------------------------------------------------------------

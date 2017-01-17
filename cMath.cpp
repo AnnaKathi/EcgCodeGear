@@ -7,19 +7,17 @@
 //---------------------------------------------------------------------------
 cMath::cMath()
 	{
-	Stream = new cDatastream();
 	}
 //---------------------------------------------------------------------------
 cMath::~cMath()
 	{
-	delete Stream;
 	}
 //---------------------------------------------------------------------------
-bool cMath::buildDerivates(TMemo* mInfo)
+bool cMath::buildDerivates()
 	{
-	Stream->setupStream(mInfo);
-	Stream->MovingAverage(mInfo);
-	MemoPrint(mInfo, "(math) Ableitungen gebildet"); //Test Klassenkonzept
+	setupStream();
+	MovingAverage();
+	MemoPrint("(math) Ableitungen gebildet"); //Test Klassenkonzept
 	return true;
 	}
 //---------------------------------------------------------------------------

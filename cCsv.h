@@ -6,21 +6,20 @@
 #include <ComCtrls.hpp>
 #include <stdio.h>
 //---------------------------------------------------------------------------
-#include "Basics.h"
+#include "cBasics.h"
 //---------------------------------------------------------------------------
 //! Klasse cCsv, CSV-Datei mit EKG-Daten einlesen
 /*! Die Klasse cCsv liest eine Csv-Datei zeilenweise ein.
  */
-class cCsv
+class cCsv : public cBasics
 	{
 private:
-	TProgressBar*	pbJob;
 
 public:
 	cCsv();
 	~cCsv();
 
-	bool			openFile(TMemo* mInfo);
+	bool			openFile();
 	//-----------------------------------------------------------------------
 	//------------ Funktionalitäten -----------------------------------------
 	//-----------------------------------------------------------------------

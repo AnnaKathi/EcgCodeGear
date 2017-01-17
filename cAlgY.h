@@ -6,14 +6,12 @@
 #include <ComCtrls.hpp>
 #include <stdio.h>
 //---------------------------------------------------------------------------
-#include "Basics.h"
-#include "cAlgorithmus.h"
 #include "cNonFiducial.h"
 //---------------------------------------------------------------------------
 //! Klasse cAlgY (Beispiel)
 /*! Die Klasse cAlgY, non-fiducial-Beispiel
  */
-class cAlgY : cAlgorithmus
+class cAlgY : public cNonFiducial
 	{
 private:
 	cNonFiducial*	NonFid;
@@ -22,7 +20,7 @@ public:
 	cAlgY();
 	~cAlgY();
 
-	bool		Authenticate(TMemo* mInfo);
+	bool		Authenticate();
 	bool		TestPB();
 
 	//-----------------------------------------------------------------------
@@ -32,7 +30,6 @@ public:
 	//-----------------------------------------------------------------------
 	//------------ getter und setter ----------------------------------------
 	//-----------------------------------------------------------------------
-	void setBar(TProgressBar* pb);
 	};
 //---------------------------------------------------------------------------
 #endif

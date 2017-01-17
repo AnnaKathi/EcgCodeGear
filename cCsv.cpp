@@ -13,9 +13,9 @@ cCsv::~cCsv()
 	{
 	}
 //---------------------------------------------------------------------------
-bool cCsv::openFile(TMemo* mInfo)
+bool cCsv::openFile()
 	{
-	MemoPrint(mInfo, "(csv) Datei geöffnet"); //Test Klassenkonzept
+	MemoPrint("(csv) Datei geöffnet"); //Test Klassenkonzept
 	return true;
 	}
 //---------------------------------------------------------------------------

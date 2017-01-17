@@ -7,18 +7,16 @@
 //---------------------------------------------------------------------------
 cFiducial::cFiducial()
 	{
-	Math = new cMath();
 	}
 //---------------------------------------------------------------------------
 cFiducial::~cFiducial()
 	{
-	delete Math;
 	}
 //---------------------------------------------------------------------------
-bool cFiducial::findFeatures(TMemo* mInfo)
+bool cFiducial::findFeatures()
 	{
-	Math->buildDerivates(mInfo);
-	MemoPrint(mInfo, "(fid) Fiducial Features found"); //Test Klassenkonzept
+	buildDerivates();
+	MemoPrint("(fid) Fiducial Features found"); //Test Klassenkonzept
 	return true;
 	}
 //---------------------------------------------------------------------------

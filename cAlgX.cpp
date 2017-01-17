@@ -7,18 +7,30 @@
 //---------------------------------------------------------------------------
 cAlgX::cAlgX()
 	{
-	Fiducial = new cFiducial();
 	}
 //---------------------------------------------------------------------------
 cAlgX::~cAlgX()
 	{
-	delete Fiducial;
 	}
 //---------------------------------------------------------------------------
-bool cAlgX::Authenticate(TMemo* mInfo)
+bool cAlgX::Authenticate()
 	{
-	Fiducial->findFeatures(mInfo);
-	MemoPrint(mInfo, "(AlgX) authenticate OK"); //Test Klassenkonzept
+	findFeatures();
+	ImagePaint(clRed);
+	MemoPrint("(AlgX) authenticate OK"); //Test Klassenkonzept
 	return true;
 	}
 //---------------------------------------------------------------------------
+bool cAlgX::TestPB()
+	{
+	ProgressBegin(15000);
+
+	for (int i = 0; i < 10000; i++)
+		ProgressTick();
+
+	ProgressEnd();
+
+	return true;
+	}
+//---------------------------------------------------------------------------
+

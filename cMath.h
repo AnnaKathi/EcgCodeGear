@@ -6,7 +6,6 @@
 #include <ComCtrls.hpp>
 #include <stdio.h>
 //---------------------------------------------------------------------------
-#include "Basics.h"
 #include "cDatastream.h"
 //---------------------------------------------------------------------------
 //! Klasse cMath, mathematische Operationen
@@ -16,7 +15,7 @@
  *  <li>TurningPoints finden (lokale Minia und Maxima)</li>
  *  <li>Frequenz-Bereiche finden/bilden</li></ul>
  */
-class cMath
+class cMath : public cDatastream
 	{
 private:
 	cDatastream*	Stream;
@@ -25,7 +24,7 @@ public:
 	cMath();
 	~cMath();
 
-	bool			buildDerivates(TMemo* mInfo);
+	bool			buildDerivates();
 	//-----------------------------------------------------------------------
 	//------------ Funktionalitäten -----------------------------------------
 	//-----------------------------------------------------------------------

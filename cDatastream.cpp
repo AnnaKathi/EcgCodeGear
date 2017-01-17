@@ -7,24 +7,22 @@
 //---------------------------------------------------------------------------
 cDatastream::cDatastream()
 	{
-	Csv = new cCsv();
 	}
 //---------------------------------------------------------------------------
 cDatastream::~cDatastream()
 	{
-	delete Csv;
 	}
 //---------------------------------------------------------------------------
-bool cDatastream::setupStream(TMemo* mInfo)
+bool cDatastream::setupStream()
 	{
-	Csv->openFile(mInfo);
-	MemoPrint(mInfo, "(stream) EKG-Daten erzeugt"); //Test Klassenkonzept
+	openFile();
+	MemoPrint("(stream) EKG-Daten erzeugt"); //Test Klassenkonzept
 	return true;
 	}
 //---------------------------------------------------------------------------
-bool cDatastream::MovingAverage(TMemo* mInfo)
+bool cDatastream::MovingAverage()
 	{
-	MemoPrint(mInfo, "(stream) EKD-Daten geglättet"); //Test Klassenkonzept
+	MemoPrint("(stream) EKD-Daten geglättet"); //Test Klassenkonzept
 	return true;
 	}
 //---------------------------------------------------------------------------

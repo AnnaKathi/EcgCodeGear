@@ -6,8 +6,6 @@
 #include <ComCtrls.hpp>
 #include <stdio.h>
 //---------------------------------------------------------------------------
-#include "Basics.h"
-#include "cBasics.h"
 #include "cCsv.h"
 //---------------------------------------------------------------------------
 //! Klasse cDatastream, Verarbeitung des EKG-Signals
@@ -17,7 +15,7 @@
  *  <li>Millisekunden von...bis</li>
  *  <li>Amplitude von...bis</li></ul>
  */
-class cDatastream : cBasics
+class cDatastream : public cCsv
 	{
 private:
 	cCsv*			Csv;
@@ -26,8 +24,8 @@ public:
 	cDatastream();
 	~cDatastream();
 
-	bool	setupStream(TMemo* mInfo);
-	bool	MovingAverage(TMemo* mInfo);
+	bool	setupStream();
+	bool	MovingAverage();
 	//-----------------------------------------------------------------------
 	//------------ Funktionalitäten -----------------------------------------
 	//-----------------------------------------------------------------------
