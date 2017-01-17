@@ -67,10 +67,13 @@ void cBasics::ProgressTick(int tick) //tick ist vorbesetzt mit 1
 	pbJob->Position += tick;
 	}
 //---------------------------------------------------------------------------
-void cBasics::ProgressEnd()
+void cBasics::ProgressEnd(int endwert) //endwert ist vorbsetzt mit 0
 	{
 	if (pbJob == NULL) return;
-	pbJob->Position = pbJob->Max;
+	if (endwert == 0)
+		pbJob->Position = pbJob->Max;
+	else
+		pbJob->Position = endwert;
 	}
 //---------------------------------------------------------------------------
 //------------ Image --------------------------------------------------------
